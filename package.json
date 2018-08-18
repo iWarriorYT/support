@@ -9,6 +9,7 @@
   "author": "support",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.4.2"
+    "discord.js": "11.4.2",
+    "request": "2.81.0"
   }
 }
