@@ -35,7 +35,7 @@ client.on("message", (message) => {
             SEND_MESSAGES: true,
             READ_MESSAGES: true
         });
-        message.channel.send(`:white_check_mark: Ticket Kanalın Oluşturuldu, #${c.name}.`);
+        message.channel.send(`:white_check_mark: Ticket Kanalın Oluşturuldu, #${c.name}.`).then(msg => {msg.delete(3500)});
         const embed = new Discord.RichEmbed()
         .addField(`Hey ${message.author.username}!`, `Başarılı Bir Şekilde Ticketın Açıldı, Şimdi Destek Ekibini Beklemen Lazım.`)
         .addField('Konu', message.content)
