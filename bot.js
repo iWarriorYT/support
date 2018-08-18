@@ -1,8 +1,5 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-/*
-http://github.com/arpelo
-*/
 
 function clean(text) {
     if (typeof(text) === "string")
@@ -67,9 +64,6 @@ client.on("message", (message) => {
     });
 }
 
-/*
-http://github.com/arpelo
-*/
 if (message.content.toLowerCase() === `${prefix}ticket`) {
     const reason = message.content.split(" ").slice(1).join(" ");
     if (!message.guild.roles.exists("name", "[ Destek Ekibi ]")) return message.channel.send(`Bu Sunucuda '**Destek Ekibi**' rolünü bulamadım bu yüzden ticket açamıyorum \nEğer sunucu sahibisen, Destek Ekibi Rolünü oluşturabilirsin.`);
