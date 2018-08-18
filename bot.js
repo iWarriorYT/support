@@ -20,6 +20,7 @@ client.on("message", (message) => {
   if(message.channel.id === "479608769152548866") {
     if (!message.guild.roles.exists("name", "[ Destek Ekibi ]")) return message.channel.send(`Bu Sunucuda '**Destek Ekibi**' rolünü bulamadım bu yüzden ticket açamıyorum \nEğer sunucu sahibisen, Destek Ekibi Rolünü oluşturabilirsin.`);
     if (message.guild.channels.exists("name", "destek-" + message.author.id)) return message.channel.send(`Zaten açık durumda bir ticketin var.`).then(msg => {msg.delete(3500)});
+      message.delete();
     message.guild.createChannel(`destek-${message.author.id}`, "text").then(c => {
         let role = message.guild.roles.find("name", "[ Destek Ekibi ]");
         let role2 = message.guild.roles.find("name", "@everyone");
@@ -69,6 +70,7 @@ if (message.content.toLowerCase() === `${prefix}ticket`) {
     const reason = message.content.split(" ").slice(1).join(" ");
     if (!message.guild.roles.exists("name", "[ Destek Ekibi ]")) return message.channel.send(`Bu Sunucuda '**Destek Ekibi**' rolünü bulamadım bu yüzden ticket açamıyorum \nEğer sunucu sahibisen, Destek Ekibi Rolünü oluşturabilirsin.`);
     if (message.guild.channels.exists("name", "destek-" + message.author.id)) return message.channel.send(`Zaten açık durumda bir ticketin var.`).then(msg => {msg.delete(3500)});
+    message.delete();
     message.guild.createChannel(`destek-${message.author.id}`, "text").then(c => {
         let role = message.guild.roles.find("name", "[ Destek Ekibi ]");
         let role2 = message.guild.roles.find("name", "@everyone");
