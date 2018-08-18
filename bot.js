@@ -22,6 +22,7 @@ client.on("message", (message) => {
     if (message.guild.channels.exists("name", "destek-" + message.author.id)) { 
     message.delete();
     message.author.send(`Zaten açık durumda bir ticketin var.`)
+        return;
     }
     message.guild.createChannel(`destek-${message.author.id}`, "text").then(c => {
         let role = message.guild.roles.find("name", "[ Destek Ekibi ]");
@@ -74,6 +75,7 @@ if (message.content.toLowerCase() === `${prefix}ticket`) {
     if (message.guild.channels.exists("name", "destek-" + message.author.id)) { 
     message.delete();
     message.author.send(`Zaten açık durumda bir ticketin var.`)
+        return;
     }
     message.guild.createChannel(`destek-${message.author.id}`, "text").then(c => {
         let role = message.guild.roles.find("name", "[ Destek Ekibi ]");
