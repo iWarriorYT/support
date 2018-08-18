@@ -40,7 +40,7 @@ client.on("message", (message) => {
         .addField(`Hey ${message.author.username}!`, `Başarılı Bir Şekilde Ticketın Açıldı, Şimdi Destek Ekibini Beklemen Lazım.`)
         .addField('Konu', message.content)
         .setTimestamp();
-        c.send(`<@&480388903308754954>`)
+        c.send('<@' + message.guild.roles.find('name', '[ Destek Ekibi ]').id + '>')
         c.send({ embed: embed });
         message.delete();
     }).catch(console.error);
@@ -89,7 +89,7 @@ if (message.content.toLowerCase() === `${prefix}ticket`) {
         .addField(`Hey ${message.author.username}!`, `Başarılı Bir Şekilde Ticket Açıldı, Şimdi Destek Ekibini Beklemelisin.`)
         .addField(`Konu`, reason ? reason : 'Konu Verilmemiş')
         .setTimestamp();
-        c.send('@[ Destek Ekibi ] ')
+        c.send('<@' + message.guild.roles.find('name', '[ Destek Ekibi ]').id + '>')
         c.send({ embed: embed });
         message.delete();
     }).catch(console.error);
