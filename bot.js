@@ -40,7 +40,7 @@ client.on("message", (message) => {
         .addField(`Hey ${message.author.username}!`, `Başarılı Bir Şekilde Ticketın Açıldı, Şimdi Destek Ekibini Beklemen Lazım.`)
         .addField('Konu', message.content)
         .setTimestamp();
-        c.send('@[ Destek Ekibi ] ')
+        c.send(`<@&480388903308754954>`)
         c.send({ embed: embed });
         message.delete();
     }).catch(console.error);
