@@ -38,12 +38,12 @@ client.on("message", (message) => {
             READ_MESSAGES: false
         });
          c.overwritePermissions(role4, {
-            SEND_MESSAGES: false,
-            READ_MESSAGES: false
+            SEND_MESSAGES: true,
+            READ_MESSAGES: true
         });
         c.overwritePermissions(role3, {
-            SEND_MESSAGES: false,
-            READ_MESSAGES: false
+            SEND_MESSAGES: true,
+            READ_MESSAGES: true
         });
         c.overwritePermissions(message.author, {
             SEND_MESSAGES: true,
@@ -101,12 +101,12 @@ if (message.content.toLowerCase() === `${prefix}ticket`) {
             READ_MESSAGES: false
         });
         c.overwritePermissions(role3, {
-            SEND_MESSAGES: false,
-            READ_MESSAGES: false
+            SEND_MESSAGES: true,
+            READ_MESSAGES: true
         });
          c.overwritePermissions(role4, {
-            SEND_MESSAGES: false,
-            READ_MESSAGES: false
+            SEND_MESSAGES: true,
+            READ_MESSAGES: true
         });
         c.overwritePermissions(message.author, {
             SEND_MESSAGES: true,
