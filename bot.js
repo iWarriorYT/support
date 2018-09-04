@@ -27,12 +27,17 @@ client.on("message", (message) => {
     message.guild.createChannel(`destek-${message.author.id}`, "text").then(c => {
         let role = message.guild.roles.find("name", "Destek Ekibi");
         let role3 = message.guild.roles.find("name", "Destek Lideri");
+        let role4 = message.guild.roles.find("name", "Deneme Destek Ekibi");
         let role2 = message.guild.roles.find("name", "@everyone");
         c.overwritePermissions(role, {
             SEND_MESSAGES: true,
             READ_MESSAGES: true
         });
         c.overwritePermissions(role2, {
+            SEND_MESSAGES: false,
+            READ_MESSAGES: false
+        });
+         c.overwritePermissions(role4, {
             SEND_MESSAGES: false,
             READ_MESSAGES: false
         });
@@ -85,6 +90,7 @@ if (message.content.toLowerCase() === `${prefix}ticket`) {
     message.guild.createChannel(`destek-${message.author.id}`, "text").then(c => {
         let role = message.guild.roles.find("name", "Destek Ekibi");
         let role3 = message.guild.roles.find("name", "Destek Ekibi");
+        let role4 = message.guild.roles.find("name", "Deneme Destek Ekibi");
         let role2 = message.guild.roles.find("name", "@everyone");
         c.overwritePermissions(role, {
             SEND_MESSAGES: true,
@@ -95,6 +101,10 @@ if (message.content.toLowerCase() === `${prefix}ticket`) {
             READ_MESSAGES: false
         });
         c.overwritePermissions(role3, {
+            SEND_MESSAGES: false,
+            READ_MESSAGES: false
+        });
+         c.overwritePermissions(role4, {
             SEND_MESSAGES: false,
             READ_MESSAGES: false
         });
