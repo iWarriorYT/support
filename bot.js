@@ -55,6 +55,7 @@ client.on("message", (message) => {
         .addField('Konu', message.content)
         .setTimestamp();
         c.send('<@&473152215369121792>')
+        c.send('<@&486478713303859231>')
         c.send({ embed: embed });
         message.delete();
     }).catch(console.error);
@@ -118,6 +119,7 @@ if (message.content.toLowerCase() === `${prefix}ticket`) {
         .addField(`Konu`, reason ? reason : 'Konu Verilmemiş')
         .setTimestamp();
         c.send('<@&473152215369121792>')
+        c.send('<@&486478713303859231>')
         c.send({ embed: embed });
         message.delete();
     }).catch(console.error);
